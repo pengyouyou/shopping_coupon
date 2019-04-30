@@ -1,0 +1,21 @@
+<!-- 导航 -->
+<!-- <nav title="每日精选配色" bgColor="transparent" leftShare></nav> -->
+<nav title="配色广场" bgColor="#222" dark go-back></nav>
+
+
+<container id='view_area'>
+    <!-- <scroll-view scroll-y="true" style="height: 600rpx;"  bindscrolltolower='onScrollToBottom'> -->
+    <view class='container'>
+		<view class="newest-box">
+			<block wx:for-items="{{infos}}" wx:key="{{index}}">
+				<one info="{{item}}" title_style="color: #ccc;" colors_style="height: 100rpx;" swidth="700" style="margin-top: 20rpx;"></one>
+			</block>
+
+			<view class="loading-box" wx:if="{{loading}}">
+				<!-- <text>正在加载...</text> -->
+				<button loading='true'> 正在加载...</button>
+			</view>
+        </view>
+	</view>
+
+</container>

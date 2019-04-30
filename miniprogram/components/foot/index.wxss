@@ -1,0 +1,17 @@
+.body {
+	padding: 30rpx 0 30rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title-text {
+	/* position: absolute;
+	left: 0;
+	top: 0; */
+	padding: 6rpx 0 2rpx;
+	font-size: 22rpx;
+	color: #777;
+}

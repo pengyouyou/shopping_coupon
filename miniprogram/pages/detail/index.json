@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+	  "nav": "/components/nav/index",
+	  "container": "/components/nav/container",
+	  "foot": "/components/foot/index"
+  },
+
+  "backgroundColor": "#111"
+}

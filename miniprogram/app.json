@@ -1,0 +1,18 @@
+{
+	"pages": [
+		"pages/home/index",
+		"pages/hue/index",
+		"pages/matching/index",
+		"pages/detail/index",
+		"pages/square/index"
+	],
+	"window": {
+		"backgroundColor": "#fff",
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarTitleText": "颜色配色表",
+		"navigationBarTextStyle": "white",
+		"navigationStyle": "custom"
+	},
+	"sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+	  "nav": "/components/nav/index",
+	  "container": "/components/nav/container",
+	  "one": "/components/one/page",
+	  "foot": "/components/foot/index"
+  }
+}

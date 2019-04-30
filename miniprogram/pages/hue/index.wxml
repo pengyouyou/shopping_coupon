@@ -1,0 +1,17 @@
+<!-- 导航 -->
+<nav title="{{title}}" bgColor="#F8F8F8" go-back></nav>
+
+<container>
+    <view class="container">
+
+		<block wx:for-items="{{info}}" wx:key="title">
+			<view class="hue-item" hover-class='hue-item-hover' style="background-color: {{item.bgcolor}};" bindtap='onTap' data-idx="{{index}}">
+				<view class="navigator-arrow"></view>
+				<text>{{item.title}}</text>
+				
+			</view>
+		</block>
+
+    </view>
+
+</container>

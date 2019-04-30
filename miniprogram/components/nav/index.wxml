@@ -1,0 +1,23 @@
+<view
+  class='nav-container'
+  style='padding-top:{{STATUSBAR_HEIGHT}}px;background-color:{{bgColor || (dark?"#999":"#FFF")}};{{borderBottom?"border-bottom:1px solid "+(borderBottom||"#DDD"):""}};{{shadow?"box-shadow:0 5px 20px -5px "+(shadow||"#DDD"):""}}'>
+  <!-- 左侧按钮 -->
+  <!-- 返回？ -->
+  <view class='nav-button' wx:if="{{goBack}}" bindtap='goBackHandler'>
+    <image class='nav-button-image' src='{{dark?"../assets/nav/back_white.svg":"../assets/nav/back_black.svg"}}'></image>
+  </view>
+  <!-- 分享 -->
+  <button class='nav-button-share' wx:if="{{!goBack && leftShare}}" open-type="share">
+  	<image class='nav-image-share' src='{{dark?"../assets/nav/share_white.svg":"../assets/nav/share_black.svg"}}'></image>
+  </button>
+  <!-- 图标 -->
+  <view class='nav-button' wx:elif="{{!goBack && leftIcon}}" bindtap='onLeftHandler'>
+	<image class='nav-button-image' src='{{leftIcon}}'></image>
+  </view>
+  <!-- 标题 -->
+  <view class='nav-title' style='padding-left:{{goBack?"0":"44"}}px;'>
+    <text style='font-size: 32rpx; color:{{dark?"#FFF":"#333"}};'>{{title}}</text>
+  </view>
+  <!-- 右侧占位符 -->
+  <view wx:if="{{leftIcon || leftShare}}" class='nav-button'></view>
+</view>

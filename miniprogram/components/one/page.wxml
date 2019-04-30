@@ -1,0 +1,19 @@
+<view class='body'>
+	<text class='title-text' style="{{title_style}}">{{info.title}}</text>
+    <view class='color-container' hover-class='hover' bindtap='onTap'>
+
+            <!-- 长按或者左滑出现 收藏、分享、发送到微信按钮 -->
+            <!-- <button open-type='share' class='{{SHOW_DATA?"share-hide":"share-show"}}'>
+                <image src='/assets/share.svg'></image>
+            </button> -->
+
+			
+            <block wx:for-items="{{info.colors}}" wx:key="title">
+			
+                <view class="one-color-item" style="background-color: {{item}};  width: {{swidth/info.colors.length}}rpx; {{colors_style}}">
+
+                </view>
+            </block>
+
+    </view>
+</view>

@@ -1,0 +1,31 @@
+<!-- 导航 -->
+<nav title="{{title}}" bgColor="#F8F8F8" go-back></nav>
+
+<container>
+    <view class="container">
+		<view class='helper-box {{SHOW_HELPER}} ? "show-helper": ""' wx:if="{{SHOW_HELPER}}">
+			<text>长按色块可以复制颜色代码</text>
+			<image src="../../assets/close.svg" bindtap='closeHelper'></image>
+		</view>
+
+		<view class="tip-box" wx:if="{{tips}}">
+			<text>{{tips}}</text>
+		</view>
+
+		<block wx:for-items="{{info.color}}" wx:key="title">
+			<view class="matching-item" data-idx="{{index}}" hover-class='matching-item-hover' bindlongtap='onLongTap' data-idx="{{index}}">
+				<view class="matching-color-item" style="background-color: {{item[0]}};">
+					<text>{{item[0]}}</text>
+				</view>
+				<view class="matching-color-item" style="background-color: {{item[1]}};">
+					<text>{{item[1]}}</text>
+				</view>
+				<view class="matching-color-item" style="background-color: {{item[2]}};">
+					<text>{{item[2]}}</text>
+				</view>
+			</view>
+		</block>
+
+    </view>
+
+</container>
